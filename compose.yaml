@@ -1,0 +1,23 @@
+version: '3.0'
+
+networks:
+  banking:
+    driver: bridge #containers, connected to this network can communicate
+    #using their container names as hostnames
+
+volumes:
+  db-data:
+    driver: local #to persist data outside the container's lifecycle
+    #e.g., persisting a database between restarts.
+
+services:
+  postgres:
+    image: 'postgres:17.5-alpine'
+    ports:
+      - '5431:5432'
+    env_file:
+      - .env
+    networks:
+      - banking
+    volumes:
+      - db-data:/var/lib/postgresql/data
