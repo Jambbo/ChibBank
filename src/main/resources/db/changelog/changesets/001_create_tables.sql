@@ -2,7 +2,7 @@ create table accounts
 (
     id      varchar(36) primary key,
     number  varchar not null unique,
-    balance numeric not null default 0
+    balance numeric not null default 0 check ( balance >= 0 )
 );
 
 create table clients

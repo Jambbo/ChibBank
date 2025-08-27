@@ -7,5 +7,5 @@ import com.example.chibbank.service.QueryService;
 public interface ClientService
         extends QueryService<Client>, CommandService<Client> {
 
-
+    boolean existsByUsername(String username);
 }

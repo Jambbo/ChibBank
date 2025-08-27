@@ -17,4 +17,9 @@ public class ClientCommandServiceImpl implements ClientCommandService{
         ClientCreateEvent event = new ClientCreateEvent(object);
         eventService.create(event);
     }
+
+    public boolean existsByUsername(String username){
+        return true;
+    }
+
 }

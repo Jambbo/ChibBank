@@ -15,7 +15,6 @@ public class ObjectConverter implements AttributeConverter<Object, String> {
     @Override
     public String convertToDatabaseColumn(Object attribute) {
         return objectMapper.writeValueAsString(attribute);
-
     }
 
     @Override
