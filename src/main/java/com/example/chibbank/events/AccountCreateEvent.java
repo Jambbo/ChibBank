@@ -1,7 +1,7 @@
 package com.example.chibbank.events;
 
 import com.example.chibbank.domain.aggregate.Aggregate;
-import com.example.chibbank.domain.model.Transaction;
+import com.example.chibbank.domain.model.Account;
 import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,10 +11,10 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class TransactionCreateEvent extends AbstractEvent {
+public class AccountCreateEvent extends AbstractEvent {
 
-    public TransactionCreateEvent(Transaction payload) {
-        super(null, payload, EventType.TRANSACTION_CREATE);
+    public AccountCreateEvent(Account payload) {
+        super(null, payload, EventType.ACCOUNT_CREATE);
     }
 
     @Override

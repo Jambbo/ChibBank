@@ -34,6 +34,7 @@ public class Client {
             inverseJoinColumns = @JoinColumn(name = "card_id")
     )
     private List<Card> cards;
+
     @OneToOne
     private Account account;
 

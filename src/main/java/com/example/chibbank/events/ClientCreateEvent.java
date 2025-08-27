@@ -1,6 +1,7 @@
 package com.example.chibbank.events;
 
 import com.example.chibbank.domain.aggregate.Aggregate;
+import com.example.chibbank.domain.model.Client;
 import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class ClientCreateEvent extends AbstractEvent {
 
-    public ClientCreateEvent(Object payload) {
+    public ClientCreateEvent(Client payload) {
         super(null, payload, EventType.CLIENT_CREATE);
     }
 
