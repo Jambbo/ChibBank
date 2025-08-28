@@ -18,8 +18,4 @@ public class ClientCommandServiceImpl implements ClientCommandService{
         eventService.create(event);
     }
 
-    public boolean existsByUsername(String username){
-        return true;
-    }
-
 }
